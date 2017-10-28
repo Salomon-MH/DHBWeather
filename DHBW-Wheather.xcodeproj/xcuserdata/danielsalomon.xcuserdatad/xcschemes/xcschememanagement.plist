@@ -7,7 +7,25 @@
 		<key>DHBW-Wheather.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>9</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>CCF3389A1F90D86700BB9E37</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CCF338AE1F90D86700BB9E37</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CCF338B91F90D86700BB9E37</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
