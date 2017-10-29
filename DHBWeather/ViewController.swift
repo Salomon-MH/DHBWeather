@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  DHBW-Wheather
+//  DHBWeather
 //
 //  Created by Daniel Salomon on 13.10.17.
 //  Copyright © 2017 Daniel Salomon. All rights reserved.

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CCF3389A1F90D86700BB9E37"
-               BuildableName = "DHBW-Wheather.app"
-               BlueprintName = "DHBW-Wheather"
-               ReferencedContainer = "container:DHBW-Wheather.xcodeproj">
+               BuildableName = "DHBWeather.app"
+               BlueprintName = "DHBWeather"
+               ReferencedContainer = "container:DHBWeather.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CCF338AE1F90D86700BB9E37"
-               BuildableName = "DHBW-WheatherTests.xctest"
-               BlueprintName = "DHBW-WheatherTests"
-               ReferencedContainer = "container:DHBW-Wheather.xcodeproj">
+               BuildableName = "DHBWeatherTests.xctest"
+               BlueprintName = "DHBWeatherTests"
+               ReferencedContainer = "container:DHBWeather.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -44,9 +44,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CCF338B91F90D86700BB9E37"
-               BuildableName = "DHBW-WheatherUITests.xctest"
-               BlueprintName = "DHBW-WheatherUITests"
-               ReferencedContainer = "container:DHBW-Wheather.xcodeproj">
+               BuildableName = "DHBWeatherUITests.xctest"
+               BlueprintName = "DHBWeatherUITests"
+               ReferencedContainer = "container:DHBWeather.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -54,9 +54,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CCF3389A1F90D86700BB9E37"
-            BuildableName = "DHBW-Wheather.app"
-            BlueprintName = "DHBW-Wheather"
-            ReferencedContainer = "container:DHBW-Wheather.xcodeproj">
+            BuildableName = "DHBWeather.app"
+            BlueprintName = "DHBWeather"
+            ReferencedContainer = "container:DHBWeather.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CCF3389A1F90D86700BB9E37"
-            BuildableName = "DHBW-Wheather.app"
-            BlueprintName = "DHBW-Wheather"
-            ReferencedContainer = "container:DHBW-Wheather.xcodeproj">
+            BuildableName = "DHBWeather.app"
+            BlueprintName = "DHBWeather"
+            ReferencedContainer = "container:DHBWeather.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,9 +97,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CCF3389A1F90D86700BB9E37"
-            BuildableName = "DHBW-Wheather.app"
-            BlueprintName = "DHBW-Wheather"
-            ReferencedContainer = "container:DHBW-Wheather.xcodeproj">
+            BuildableName = "DHBWeather.app"
+            BlueprintName = "DHBWeather"
+            ReferencedContainer = "container:DHBWeather.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

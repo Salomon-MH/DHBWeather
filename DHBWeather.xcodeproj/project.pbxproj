@@ -194,15 +194,15 @@
 		CC2B451A1FA358AB00FFF5BB /* WeatherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 		CC38832A1F9A2717007F971A /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		CC3883431F9A2722007F971A /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
-		CCF3389B1F90D86700BB9E37 /* DHBW-Wheather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DHBW-Wheather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCF3389B1F90D86700BB9E37 /* DHBWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHBWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF3389E1F90D86700BB9E37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCF338A01F90D86700BB9E37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CCF338A31F90D86700BB9E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCF338A51F90D86700BB9E37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCF338A81F90D86700BB9E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCF338AA1F90D86700BB9E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CCF338AF1F90D86700BB9E37 /* DHBW-WheatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DHBW-WheatherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCF338BA1F90D86700BB9E37 /* DHBW-WheatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DHBW-WheatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCF338AF1F90D86700BB9E37 /* DHBWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DHBWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCF338BA1F90D86700BB9E37 /* DHBWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DHBWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF338CC1F90D9AA00BB9E37 /* MyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataSource.swift; sourceTree = "<group>"; };
 		CCF338CE1F90DBF000BB9E37 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -286,7 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				CC3882C31F9A2623007F971A /* Libraries */,
-				CCF3389D1F90D86700BB9E37 /* DHBW-Wheather */,
+				CCF3389D1F90D86700BB9E37 /* DHBWeather */,
 				CCF3389C1F90D86700BB9E37 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -294,14 +294,14 @@
 		CCF3389C1F90D86700BB9E37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCF3389B1F90D86700BB9E37 /* DHBW-Wheather.app */,
-				CCF338AF1F90D86700BB9E37 /* DHBW-WheatherTests.xctest */,
-				CCF338BA1F90D86700BB9E37 /* DHBW-WheatherUITests.xctest */,
+				CCF3389B1F90D86700BB9E37 /* DHBWeather.app */,
+				CCF338AF1F90D86700BB9E37 /* DHBWeatherTests.xctest */,
+				CCF338BA1F90D86700BB9E37 /* DHBWeatherUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CCF3389D1F90D86700BB9E37 /* DHBW-Wheather */ = {
+		CCF3389D1F90D86700BB9E37 /* DHBWeather */ = {
 			isa = PBXGroup;
 			children = (
 				CCF3389E1F90D86700BB9E37 /* AppDelegate.swift */,
@@ -314,15 +314,15 @@
 				CCF338CC1F90D9AA00BB9E37 /* MyDataSource.swift */,
 				CCF338CE1F90DBF000BB9E37 /* MyTableViewCell.swift */,
 			);
-			path = "DHBW-Wheather";
+			path = DHBWeather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CCF3389A1F90D86700BB9E37 /* DHBW-Wheather */ = {
+		CCF3389A1F90D86700BB9E37 /* DHBWeather */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCF338C31F90D86700BB9E37 /* Build configuration list for PBXNativeTarget "DHBW-Wheather" */;
+			buildConfigurationList = CCF338C31F90D86700BB9E37 /* Build configuration list for PBXNativeTarget "DHBWeather" */;
 			buildPhases = (
 				CCF338971F90D86700BB9E37 /* Sources */,
 				CCF338981F90D86700BB9E37 /* Frameworks */,
@@ -336,14 +336,14 @@
 				CC1DF0961FA4D42900980B90 /* PBXTargetDependency */,
 				CC1DF0A51FA4FE2000980B90 /* PBXTargetDependency */,
 			);
-			name = "DHBW-Wheather";
+			name = DHBWeather;
 			productName = "DHBW-Wheather";
-			productReference = CCF3389B1F90D86700BB9E37 /* DHBW-Wheather.app */;
+			productReference = CCF3389B1F90D86700BB9E37 /* DHBWeather.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CCF338AE1F90D86700BB9E37 /* DHBW-WheatherTests */ = {
+		CCF338AE1F90D86700BB9E37 /* DHBWeatherTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCF338C61F90D86700BB9E37 /* Build configuration list for PBXNativeTarget "DHBW-WheatherTests" */;
+			buildConfigurationList = CCF338C61F90D86700BB9E37 /* Build configuration list for PBXNativeTarget "DHBWeatherTests" */;
 			buildPhases = (
 				CCF338AB1F90D86700BB9E37 /* Sources */,
 				CCF338AC1F90D86700BB9E37 /* Frameworks */,
@@ -354,14 +354,14 @@
 			dependencies = (
 				CCF338B11F90D86700BB9E37 /* PBXTargetDependency */,
 			);
-			name = "DHBW-WheatherTests";
+			name = DHBWeatherTests;
 			productName = "DHBW-WheatherTests";
-			productReference = CCF338AF1F90D86700BB9E37 /* DHBW-WheatherTests.xctest */;
+			productReference = CCF338AF1F90D86700BB9E37 /* DHBWeatherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CCF338B91F90D86700BB9E37 /* DHBW-WheatherUITests */ = {
+		CCF338B91F90D86700BB9E37 /* DHBWeatherUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCF338C91F90D86700BB9E37 /* Build configuration list for PBXNativeTarget "DHBW-WheatherUITests" */;
+			buildConfigurationList = CCF338C91F90D86700BB9E37 /* Build configuration list for PBXNativeTarget "DHBWeatherUITests" */;
 			buildPhases = (
 				CCF338B61F90D86700BB9E37 /* Sources */,
 				CCF338B71F90D86700BB9E37 /* Frameworks */,
@@ -372,9 +372,9 @@
 			dependencies = (
 				CCF338BC1F90D86700BB9E37 /* PBXTargetDependency */,
 			);
-			name = "DHBW-WheatherUITests";
+			name = DHBWeatherUITests;
 			productName = "DHBW-WheatherUITests";
-			productReference = CCF338BA1F90D86700BB9E37 /* DHBW-WheatherUITests.xctest */;
+			productReference = CCF338BA1F90D86700BB9E37 /* DHBWeatherUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -403,7 +403,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CCF338961F90D86700BB9E37 /* Build configuration list for PBXProject "DHBW-Wheather" */;
+			buildConfigurationList = CCF338961F90D86700BB9E37 /* Build configuration list for PBXProject "DHBWeather" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -430,9 +430,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				CCF3389A1F90D86700BB9E37 /* DHBW-Wheather */,
-				CCF338AE1F90D86700BB9E37 /* DHBW-WheatherTests */,
-				CCF338B91F90D86700BB9E37 /* DHBW-WheatherUITests */,
+				CCF3389A1F90D86700BB9E37 /* DHBWeather */,
+				CCF338AE1F90D86700BB9E37 /* DHBWeatherTests */,
+				CCF338B91F90D86700BB9E37 /* DHBWeatherUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -626,12 +626,12 @@
 		};
 		CCF338B11F90D86700BB9E37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CCF3389A1F90D86700BB9E37 /* DHBW-Wheather */;
+			target = CCF3389A1F90D86700BB9E37 /* DHBWeather */;
 			targetProxy = CCF338B01F90D86700BB9E37 /* PBXContainerItemProxy */;
 		};
 		CCF338BC1F90D86700BB9E37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CCF3389A1F90D86700BB9E37 /* DHBW-Wheather */;
+			target = CCF3389A1F90D86700BB9E37 /* DHBWeather */;
 			targetProxy = CCF338BB1F90D86700BB9E37 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -770,10 +770,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MZ356T6C39;
-				INFOPLIST_FILE = "DHBW-Wheather/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/DHBWeather/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.salomon-mh.DHBW-Wheather";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.salomon-mh.DHBWeather";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -787,10 +787,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MZ356T6C39;
-				INFOPLIST_FILE = "DHBW-Wheather/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/DHBWeather/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.salomon-mh.DHBW-Wheather";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.salomon-mh.DHBWeather";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -810,7 +810,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DHBW-Wheather.app/DHBW-Wheather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DHBWeather.app/DHBWeather";
 			};
 			name = Debug;
 		};
@@ -827,7 +827,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DHBW-Wheather.app/DHBW-Wheather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DHBWeather.app/DHBWeather";
 			};
 			name = Release;
 		};
@@ -866,7 +866,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CCF338961F90D86700BB9E37 /* Build configuration list for PBXProject "DHBW-Wheather" */ = {
+		CCF338961F90D86700BB9E37 /* Build configuration list for PBXProject "DHBWeather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCF338C11F90D86700BB9E37 /* Debug */,
@@ -875,7 +875,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCF338C31F90D86700BB9E37 /* Build configuration list for PBXNativeTarget "DHBW-Wheather" */ = {
+		CCF338C31F90D86700BB9E37 /* Build configuration list for PBXNativeTarget "DHBWeather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCF338C41F90D86700BB9E37 /* Debug */,
@@ -884,7 +884,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCF338C61F90D86700BB9E37 /* Build configuration list for PBXNativeTarget "DHBW-WheatherTests" */ = {
+		CCF338C61F90D86700BB9E37 /* Build configuration list for PBXNativeTarget "DHBWeatherTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCF338C71F90D86700BB9E37 /* Debug */,
@@ -893,7 +893,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCF338C91F90D86700BB9E37 /* Build configuration list for PBXNativeTarget "DHBW-WheatherUITests" */ = {
+		CCF338C91F90D86700BB9E37 /* Build configuration list for PBXNativeTarget "DHBWeatherUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCF338CA1F90D86700BB9E37 /* Debug */,
