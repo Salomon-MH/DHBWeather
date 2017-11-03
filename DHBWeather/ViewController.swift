@@ -24,15 +24,39 @@ class ViewController: UIViewController {
     var updatetimer: Timer? = nil
     var networkerrorshown: Bool = false
 
+    @objc func lightHapticFeedback() {
+        if #available(iOS 10.0, *) {
+            let generator = UIImpactFeedbackGenerator(style: .medium)
+            generator.impactOccurred()
+        }
+    }
+    
+    /**func initAlertBlur() {
+        // Create blur effect
+        let blurEffect = UIBlurEffect(style: .light)
+        // Add effect to view
+        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+        visualEffectView.frame = view.frame
+        view.addSubview(visualEffectView)
+    }
+    func endAlertBlur() {
+        //Remove the blur
+        visualEffectView.removeFromSuperview() //Remove blur effect from background
+    }**/
     
     @IBAction func chooseCityButtonClick(_ sender: Any) {
         NSLog("INFO: City selection button clicked.")
+        if #available(iOS 10.0, *) {
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
+        }
         let alert = UIAlertController(title: "Stadtnamen eingeben...", message: "Bitte gib den Namen der Stadt ein, dessen Wetter du wissen möchtest. ☀️", preferredStyle: .alert)
         var locationTextField: UITextField!
         alert.addTextField {
             textField in
             locationTextField = textField
             textField.placeholder = "Stadtname"
+            textField.addTarget(self, action: #selector(self.lightHapticFeedback), for: UIControlEvents.editingChanged)
         }
         alert.addAction(UIAlertAction(title: "Bestätigen", style: .default, handler: {_ in
             if let text = locationTextField.text {
@@ -52,6 +76,10 @@ class ViewController: UIViewController {
     
     @IBAction func updateButtonClick(_ sender: Any) {
         NSLog("INFO: Update time button clicked.")
+        if #available(iOS 10.0, *) {
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
+        }
         let alert = UIAlertController(title: "Updateintervall eingeben...", message: "Wie oft soll sich das Wetter automatisch für dich aktualisieren? ☺️ (In Sekunden)", preferredStyle: .alert)
         var updateTextField: UITextField!
         alert.addTextField {
@@ -59,6 +87,7 @@ class ViewController: UIViewController {
             updateTextField = textField
             textField.keyboardType = UIKeyboardType.numberPad
             textField.placeholder = "Updateintervall"
+            textField.addTarget(self, action: #selector(self.lightHapticFeedback), for: UIControlEvents.editingChanged)
         }
         alert.addAction(UIAlertAction(title: "Bestätigen", style: .default, handler: {_ in
             if let text = updateTextField.text {
@@ -141,6 +170,11 @@ class ViewController: UIViewController {
             } else if result.temperature != "--°C" && self.networkerrorshown {
                 self.networkerrorshown = false
                 NSLog("INFO: Resetting network error.")
+            }
+            if self.weatherAreaLabel.text == "null" {
+                self.weatherAreaLabel.text = "Ungültige Stadt."
+                self.weatherConditionLabel.text = "Anderen Begriff eingeben."
+                self.temperatureLabel.text = "--°C"
             }
         }
     }

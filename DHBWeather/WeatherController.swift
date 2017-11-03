@@ -38,7 +38,7 @@ class WeatherController {
                 
                 if let data = response.data {
                     let json = JSON(data)
-                    let resultingdata = WeatherData(temperature: "\(json["main"]["temp"])°C", weather: "\(json["weather"][0]["description"])", cityname: "\(json["name"])", weatherimage: "\(json["weather"][0]["icon"])")
+                    let resultingdata = WeatherData(temperature: "\(json["main"]["temp"].doubleValue)°C", weather: "\(json["weather"][0]["description"])", cityname: "\(json["name"])", weatherimage: "\(json["weather"][0]["icon"])")
                     NSLog("NETWORK: Temperature \(json["main"]["temp"])°C with weather '\(json["weather"][0]["description"])' and icon \(json["weather"][0]["icon"]) recieved for area '\(json["name"])'.")
                     callBack(resultingdata)
                 } else {
