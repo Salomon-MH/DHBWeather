@@ -10,12 +10,6 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-struct WeatherData {
-    var temperature: String
-    var weather: String
-    var cityname: String
-    var weatherimage: String
-}
 
 class WeatherController {
     func loadWeather(city: String, callBack: @escaping (_ : WeatherData) -> Void ) {
@@ -47,7 +41,7 @@ class WeatherController {
             }
         } else {
             NSLog("NETWORK: No network connection available...")
-            let resultingdata = WeatherData(temperature: "--°C", weather: "Fleischbällchenregen", cityname: city, weatherimage: "01d")
+            let resultingdata = WeatherData(temperature: "--°C", weather: "Fleischbällchenregen", cityname: city, weatherimage: "meatballs")
             callBack(resultingdata)
         }
         

@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController , WeatherDataConsumer {
 
     @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var weatherAreaLabel: UILabel!
@@ -19,10 +19,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var updateButton: UIButton!
     @IBOutlet weak var infoButton: UIButton!
     
+    var weatherDataProvider : WeatherDataProvider?
+    
     var savedlocation: String = ""
     var updateintervall: Int = 30
     var updatetimer: Timer? = nil
     var networkerrorshown: Bool = false
+    
+    required init?( coder dc : NSCoder ) {
+        super.init( coder: dc )
+    }
 
     @objc func lightHapticFeedback() {
         if #available(iOS 10.0, *) {
@@ -190,5 +196,13 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
 
+    func weatherDataCompletionHandler( _ model : WeatherData ) {
+        // Update UI here....
+    }
+    
+    func receiveWeatherData( model : WeatherData ) {
+        // Do something here...
+    }
+    
 }
 
