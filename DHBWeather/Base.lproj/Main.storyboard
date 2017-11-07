@@ -15,7 +15,7 @@
         <!--IntitialMainView-->
         <scene sceneID="peK-qP-emt">
             <objects>
-                <viewController id="s4m-BI-uNr" userLabel="IntitialMainView" customClass="ViewController" customModule="DHBW_Wheather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="s4m-BI-uNr" userLabel="IntitialMainView" customClass="ViewController" customModule="DHBWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="stE-U6-MNr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,35 +132,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3Q-ro-w8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1475.3623188405797" y="19.565217391304348"/>
-        </scene>
-        <!--MainTableViewController-->
-        <scene sceneID="5lh-0P-suN">
-            <objects>
-                <tableViewController id="lnY-pt-2vc" userLabel="MainTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nMe-hx-tLG" userLabel="MainTableView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCellIdentifier" id="P9k-4b-5ap" userLabel="MyCell" customClass="MyTableViewCell" customModule="DHBW_Wheather" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P9k-4b-5ap" id="Qdc-pp-dzb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="9f2-it-61z" id="c0A-Ue-H8a"/>
-                            <outlet property="delegate" destination="lnY-pt-2vc" id="O5D-Cf-ZJB"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5do-Cw-wme" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="9f2-it-61z" userLabel="Datasource" customClass="MyDataSource" customModule="DHBW_Wheather" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="-345" y="22"/>
         </scene>
     </scenes>
 </document>

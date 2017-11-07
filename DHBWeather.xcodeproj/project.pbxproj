@@ -21,8 +21,6 @@
 		CCF338A41F90D86700BB9E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF338A21F90D86700BB9E37 /* Main.storyboard */; };
 		CCF338A61F90D86700BB9E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCF338A51F90D86700BB9E37 /* Assets.xcassets */; };
 		CCF338A91F90D86700BB9E37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF338A71F90D86700BB9E37 /* LaunchScreen.storyboard */; };
-		CCF338CD1F90D9AA00BB9E37 /* MyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF338CC1F90D9AA00BB9E37 /* MyDataSource.swift */; };
-		CCF338CF1F90DBF000BB9E37 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF338CE1F90DBF000BB9E37 /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,8 +205,6 @@
 		CCF338AA1F90D86700BB9E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCF338AF1F90D86700BB9E37 /* DHBWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DHBWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF338BA1F90D86700BB9E37 /* DHBWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DHBWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCF338CC1F90D9AA00BB9E37 /* MyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataSource.swift; sourceTree = "<group>"; };
-		CCF338CE1F90DBF000BB9E37 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,17 +304,15 @@
 		CCF3389D1F90D86700BB9E37 /* DHBWeather */ = {
 			isa = PBXGroup;
 			children = (
-				CCF3389E1F90D86700BB9E37 /* AppDelegate.swift */,
-				CCF338A01F90D86700BB9E37 /* ViewController.swift */,
 				CCD1ED3A1FB1F9D100A8456F /* Protocols.swift */,
 				CCD1ED281FB1F7F900A8456F /* WeatherViewModel.swift */,
+				CCF338A01F90D86700BB9E37 /* ViewController.swift */,
 				CC2B451A1FA358AB00FFF5BB /* WeatherController.swift */,
+				CCF3389E1F90D86700BB9E37 /* AppDelegate.swift */,
 				CCF338A21F90D86700BB9E37 /* Main.storyboard */,
 				CCF338A51F90D86700BB9E37 /* Assets.xcassets */,
 				CCF338A71F90D86700BB9E37 /* LaunchScreen.storyboard */,
 				CCF338AA1F90D86700BB9E37 /* Info.plist */,
-				CCF338CC1F90D9AA00BB9E37 /* MyDataSource.swift */,
-				CCF338CE1F90DBF000BB9E37 /* MyTableViewCell.swift */,
 			);
 			path = DHBWeather;
 			sourceTree = "<group>";
@@ -590,10 +584,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCF338CD1F90D9AA00BB9E37 /* MyDataSource.swift in Sources */,
 				CCD1ED291FB1F7F900A8456F /* WeatherViewModel.swift in Sources */,
 				CCD1ED3B1FB1F9D100A8456F /* Protocols.swift in Sources */,
-				CCF338CF1F90DBF000BB9E37 /* MyTableViewCell.swift in Sources */,
 				CCF338A11F90D86700BB9E37 /* ViewController.swift in Sources */,
 				CCF3389F1F90D86700BB9E37 /* AppDelegate.swift in Sources */,
 				CC2B451B1FA358AC00FFF5BB /* WeatherController.swift in Sources */,

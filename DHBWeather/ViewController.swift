@@ -28,6 +28,8 @@ class ViewController: UIViewController , WeatherDataConsumer {
     
     required init?( coder dc : NSCoder ) {
         super.init( coder: dc )
+        weatherDataProvider = WeatherViewModel()
+        weatherDataProvider?.weatherDataConsumer = self
     }
 
     @objc func lightHapticFeedback() {
@@ -154,35 +156,7 @@ class ViewController: UIViewController , WeatherDataConsumer {
 
     func loadWeatherToUI(city: String) {
         NSLog("INFO: Loading weather data...")
-        let weatherControllerObj = WeatherController()
-        weatherControllerObj.loadWeather(city: city) {
-            result in
-            self.weatherAreaLabel.text = result.cityname
-            self.weatherConditionLabel.text = result.weather
-            self.temperatureLabel.text = result.temperature
-            self.weatherImageView.image = UIImage(named: result.weatherimage)
-            NSLog("INFO: Weather data updated!")
-            if result.weatherimage.characters.last == "d" {
-                self.view.backgroundColor = UIColor.init(red: 93/255.0, green: 192/255.0, blue: 255/255.0, alpha: 1.0)
-                NSLog("INFO: Changing background to day!")
-            } else {
-                self.view.backgroundColor = UIColor.init(red: 93/1020.0, green: 192/1020.0, blue: 255/1020.0, alpha: 1.0)
-                NSLog("INFO: Changing background to night!")
-            }
-            if result.temperature == "--°C" && !self.networkerrorshown {
-                self.showNetworkUnreachable()
-                self.networkerrorshown = true
-                NSLog("WARNING: No network available, showing alert!")
-            } else if result.temperature != "--°C" && self.networkerrorshown {
-                self.networkerrorshown = false
-                NSLog("INFO: Resetting network error.")
-            }
-            if self.weatherAreaLabel.text == "null" {
-                self.weatherAreaLabel.text = "Ungültige Stadt."
-                self.weatherConditionLabel.text = "Anderen Begriff eingeben."
-                self.temperatureLabel.text = "--°C"
-            }
-        }
+        self.weatherDataProvider?.fetchWeatherDataForCity( city : city )
     }
     
     @objc func update() {
@@ -195,13 +169,33 @@ class ViewController: UIViewController , WeatherDataConsumer {
         alert.addAction(UIAlertAction(title: "Ups, meine Schuld...", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
-    func weatherDataCompletionHandler( _ model : WeatherData ) {
-        // Update UI here....
-    }
     
     func receiveWeatherData( model : WeatherData ) {
-        // Do something here...
+        self.weatherAreaLabel.text = model.cityname
+        self.weatherConditionLabel.text = model.weather
+        self.temperatureLabel.text = model.temperature
+        self.weatherImageView.image = UIImage(named: model.weatherimage)
+        NSLog("INFO: Weather data updated!")
+        if model.weatherimage.characters.last == "d" {
+            self.view.backgroundColor = UIColor.init(red: 93/255.0, green: 192/255.0, blue: 255/255.0, alpha: 1.0)
+            NSLog("INFO: Changing background to day!")
+        } else {
+            self.view.backgroundColor = UIColor.init(red: 93/1020.0, green: 192/1020.0, blue: 255/1020.0, alpha: 1.0)
+            NSLog("INFO: Changing background to night!")
+        }
+        if model.temperature == "--°C" && !self.networkerrorshown {
+            self.showNetworkUnreachable()
+            self.networkerrorshown = true
+            NSLog("WARNING: No network available, showing alert!")
+        } else if model.temperature != "--°C" && self.networkerrorshown {
+            self.networkerrorshown = false
+            NSLog("INFO: Resetting network error.")
+        }
+        if self.weatherAreaLabel.text == "null" {
+            self.weatherAreaLabel.text = "Ungültige Stadt."
+            self.weatherConditionLabel.text = "Anderen Begriff eingeben."
+            self.temperatureLabel.text = "--°C"
+        }
     }
     
 }

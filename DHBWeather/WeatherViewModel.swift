@@ -14,6 +14,8 @@ class WeatherViewModel : WeatherDataProvider {
     
     var weatherModel : WeatherData
     
+    var weatherDataConsumer : WeatherDataConsumer?
+    
     var completionHandler: weatherModelCompletionHandler?
     
     var weatherController : WeatherController
@@ -24,7 +26,18 @@ class WeatherViewModel : WeatherDataProvider {
     }
     
     
-    func fetchWeatherDataForCity( city : String , ch : weatherModelCompletionHandler ) {
+    func fetchWeatherDataForCity( city : String ) {
+        let weatherControllerObj = WeatherController()
+        var resultingdatastruct = WeatherData()
+        weatherControllerObj.loadWeather(city: city) {
+            result in
+            resultingdatastruct.cityname = result.cityname
+            resultingdatastruct.weather = result.weather
+            resultingdatastruct.temperature = result.temperature
+            resultingdatastruct.weatherimage = result.weatherimage
+            NSLog("INFO: Weather data loaded to WeatherData struct!")
+            self.weatherDataConsumer?.receiveWeatherData(model: resultingdatastruct )
+        }
         
     }
     

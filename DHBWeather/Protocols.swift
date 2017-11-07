@@ -9,7 +9,10 @@
 import Foundation
 
 protocol WeatherDataProvider {
-    func fetchWeatherDataForCity( city : String , ch : weatherModelCompletionHandler )
+    
+    var weatherDataConsumer : WeatherDataConsumer? { get set }
+    
+    func fetchWeatherDataForCity( city : String )
 }
 
 protocol WeatherDataConsumer {
