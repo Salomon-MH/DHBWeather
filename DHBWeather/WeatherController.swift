@@ -8,12 +8,10 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
 
 
 class WeatherController {
-    func loadWeather(city: String, callBack: @escaping (_ : WeatherData) -> Void ) {
-   //     URLCache.shared = URLCache(memoryCapacity: 0, diskCapacity: 0, diskPath: nil)
+     func loadWeather(city: String, callBack: @escaping (_ : DefaultDataResponse) -> Void ) {
         
         
         let url = "https://api.openweathermap.org/data/2.5/weather"
@@ -30,19 +28,10 @@ class WeatherController {
                 response in
                 NSLog("NETWORK: Webrequest exited with response code \(response.response!.statusCode)!")
                 
-                if let data = response.data {
-                    let json = JSON(data)
-                    let resultingdata = WeatherData(temperature: "\(json["main"]["temp"].doubleValue)°C", weather: "\(json["weather"][0]["description"])", cityname: "\(json["name"])", weatherimage: "\(json["weather"][0]["icon"])")
-                    NSLog("NETWORK: Temperature \(json["main"]["temp"])°C with weather '\(json["weather"][0]["description"])' and icon \(json["weather"][0]["icon"]) recieved for area '\(json["name"])'.")
-                    callBack(resultingdata)
-                } else {
-                    NSLog("NETWORK: Couldnt recieve data...")
-                }
+                callBack(response)
             }
         } else {
             NSLog("NETWORK: No network connection available...")
-            let resultingdata = WeatherData(temperature: "--°C", weather: "Fleischbällchenregen", cityname: city, weatherimage: "meatballs")
-            callBack(resultingdata)
         }
         
         
