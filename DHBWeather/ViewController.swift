@@ -179,6 +179,9 @@ class ViewController: UIViewController , WeatherDataConsumer {
         if model.weatherimage.characters.last == "d" {
             self.view.backgroundColor = UIColor.init(red: 93/255.0, green: 192/255.0, blue: 255/255.0, alpha: 1.0)
             NSLog("INFO: Changing background to day!")
+        } else if model.weatherimage == "meatballs" {
+            self.view.backgroundColor = UIColor.init(red: 255/255.0, green: 70/255.0, blue: 227/255.0, alpha: 1.0)
+            NSLog("INFO: Changing background to meatball-pink!")
         } else {
             self.view.backgroundColor = UIColor.init(red: 93/1020.0, green: 192/1020.0, blue: 255/1020.0, alpha: 1.0)
             NSLog("INFO: Changing background to night!")

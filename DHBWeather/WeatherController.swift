@@ -11,7 +11,7 @@ import Alamofire
 
 
 class WeatherController {
-     func loadWeather(city: String, callBack: @escaping (_ : DefaultDataResponse) -> Void ) {
+     func loadWeather(city: String, callBack: @escaping (_ : DefaultDataResponse?) -> Void ) {
         
         
         let url = "https://api.openweathermap.org/data/2.5/weather"
@@ -32,6 +32,7 @@ class WeatherController {
             }
         } else {
             NSLog("NETWORK: No network connection available...")
+            callBack(nil)
         }
         
         
