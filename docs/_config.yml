@@ -1,1 +1,4 @@
 theme: jekyll-theme-cayman
+title: [iOS] DHBWeather
+description: A simplistic weather app
+show_downloads: true
